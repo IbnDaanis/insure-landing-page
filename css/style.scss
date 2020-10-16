@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+@import './header', './hero', './features', './find-out', './footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-dark-violet: #2d2640;
+  --grayish-blue: #95a9c6;
+  --very-dark-violet: #2b272f;
+  --dark--grayish-violet: #837d87;
+  --very-light-gray: #fafafa;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', sans-serif;
+}
+
+body,
+button {
+  font-family: 'Karla', sans-serif;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
