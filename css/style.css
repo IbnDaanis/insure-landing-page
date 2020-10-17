@@ -149,7 +149,16 @@ header .nav-mobile {
 
 @media (max-width: 1000px) {
   header .nav-mobile {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: all 0.5s ease-in-out;
@@ -182,7 +191,7 @@ header .nav-mobile-list-item a {
   font-size: 1.1rem;
 }
 
-header .nav-mobile-list .mobile-view-plans {
+header .nav-mobile .mobile-view-plans {
   width: 90%;
   height: 3.2rem;
   background: none;
@@ -191,7 +200,15 @@ header .nav-mobile-list .mobile-view-plans {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header .nav-mobile .mobile-view-plans:hover {
+  color: var(--primary-dark-violet);
+  background: white;
 }
 
 header .nav-mobile img {
@@ -838,7 +855,7 @@ header .nav-mobile img {
   margin-bottom: 1.2rem;
 }
 
-#footer .container .footer-sitemap ul li a {
+#footer .container .footer-sitemap ul li i {
   color: var(--primary-dark-violet);
   text-transform: uppercase;
   font-weight: 700;
@@ -847,7 +864,7 @@ header .nav-mobile img {
   transition: all 0.3s ease-in-out;
 }
 
-#footer .container .footer-sitemap ul li a:hover {
+#footer .container .footer-sitemap ul li i:hover {
   text-decoration: underline;
 }
 

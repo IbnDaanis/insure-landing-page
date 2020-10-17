@@ -123,8 +123,11 @@ header {
     background: var(--primary-dark-violet);
 
 
+
     @media(max-width: 1000px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       transform: translateX(100%);
       transition: all 0.5s ease-in-out;
     }
@@ -146,16 +149,25 @@ header {
         }
       }
 
-      .mobile-view-plans {
-        width: 90%;
-        height: 3.2rem;
-        background: none;
-        border: 1px solid white;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 1.1rem;
-        cursor: pointer;
+
+    }
+
+    .mobile-view-plans {
+      width: 90%;
+      height: 3.2rem;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--primary-dark-violet);
+        background: white;
       }
     }
 
