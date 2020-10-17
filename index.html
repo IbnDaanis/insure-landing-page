@@ -28,11 +28,22 @@
             <li class="nav-list-item"><a href="#">How we work</a></li>
             <li class="nav-list-item"><a href="#">Blog</a></li>
             <li class="nav-list-item"><a href="#">Account</a></li>
-            <button class="view-plans">View Plans</button>
           </ul>
           <!-- Small Width -->
-          <div class="hamburger"><i class="fas fa-bars"></i></div>
+          <div class="hamburger">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt="Open Menu"
+              class="open-menu"
+            />
+            <img
+              src="./images/icon-close.svg"
+              alt="Close Menu"
+              class="close-menu invisible"
+            />
+          </div>
         </div>
+        <button class="view-plans">View Plans</button>
       </nav>
       <div class="nav-mobile">
         <ul class="nav-mobile-list">
@@ -50,12 +61,22 @@
     <main>
       <!-- Hero -->
       <section id="hero">
+        <img
+          src="./images/bg-pattern-intro-right-desktop.svg"
+          alt="Pattern"
+          class="pattern-desktop-right desktop"
+        /><img
+          src="./images/bg-pattern-intro-left-desktop.svg"
+          alt="Pattern"
+          class="pattern-desktop-left desktop"
+        />
         <div class="container">
           <div class="hero-text">
+            <div class="line"></div>
             <img
               src="./images/bg-pattern-intro-left-mobile.svg"
               alt="Pattern"
-              class="pattern-mobile-left"
+              class="pattern-mobile-left mobile"
             />
             <div class="container">
               <h1 class="hero-heading">Humanizing your insurance.</h1>
@@ -66,15 +87,23 @@
               </p>
               <button class="hero-action-button">View plans</button>
             </div>
-
             <img
               src="./images/bg-pattern-intro-right-mobile.svg"
               alt="Pattern"
-              class="pattern-mobile-right"
+              class="pattern-mobile-right mobile"
             />
           </div>
           <div class="hero-image">
-            <img src="./images/image-intro-mobile.jpg" alt="Intro Image" />
+            <img
+              src="./images/image-intro-mobile.jpg"
+              alt="Intro Image"
+              class="mobile"
+            />
+            <img
+              src="./images/image-intro-desktop.jpg"
+              alt="Intro Image"
+              class="desktop"
+            />
           </div>
         </div>
       </section>
@@ -131,6 +160,16 @@
       <!-- Find Out -->
       <section id="find-out">
         <div class="container">
+          <img
+            src="./images/bg-pattern-how-we-work-mobile.svg"
+            alt="Pattern"
+            class="pattern-mobile mobile"
+          />
+          <img
+            src="./images/bg-pattern-how-we-work-desktop.svg"
+            alt="Pattern"
+            class="pattern-desktop desktop"
+          />
           <h2 class="find-out-title">Find out more about how we work</h2>
           <button class="find-out-button">How we work</button>
         </div>
@@ -140,7 +179,13 @@
     <!-- Footer -->
     <footer id="footer">
       <footer class="container">
+        <!-- Heading -->
         <div class="footer-heading">
+          <img
+            src="./images/bg-pattern-footer-mobile.svg"
+            alt=""
+            class="pattern-mobile"
+          />
           <div class="footer-heading-logo">
             <img src="/images/logo.svg" alt="Insure Logo" />
           </div>
@@ -160,7 +205,9 @@
               </li>
             </ul>
           </div>
+          <div class="line"></div>
         </div>
+        <!-- Sitemap -->
         <div class="footer-sitemap">
           <!-- Our Company -->
           <div class="our-company">
@@ -193,7 +240,7 @@
           </div>
           <!-- Others -->
           <div class="others">
-            <h3 class="others-title">Our company</h3>
+            <h3 class="others-title">Others</h3>
             <ul class="others-list">
               <li class="others-list-item"><a href="#">Careers</a></li>
               <li class="others-list-item"><a href="#">Press</a></li>

@@ -1,9 +1,11 @@
 const navMobile = document.querySelector('.nav-mobile')
 const hamburger = document.querySelector('.hamburger')
-const faBars = document.querySelector('.fa-bars')
+const openMenu = document.querySelector('.open-menu')
+const closeMenu = document.querySelector('.close-menu')
 
 hamburger.addEventListener('click', e => {
   navMobile.classList.toggle('nav-change')
-  faBars.classList.toggle('fa-times')
   document.body.classList.toggle('no-scrolling')
+  openMenu.classList.toggle('invisible')
+  closeMenu.classList.toggle('invisible')
 })

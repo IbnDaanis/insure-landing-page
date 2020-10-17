@@ -23,6 +23,7 @@ h1,
 h2,
 h3 {
   font-family: 'DM Serif Display', sans-serif;
+  font-weight: 400;
 }
 
 body,
@@ -42,4 +43,21 @@ a {
 
 .no-scrolling {
   overflow: hidden;
+}
+
+
+.desktop {
+  display: inline-block;
+
+  @media(max-width: 1000px) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media(max-width: 1000px) {
+    display: inline-block;
+  }
 }
