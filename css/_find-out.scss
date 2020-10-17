@@ -27,6 +27,7 @@
       justify-content: center;
       min-height: 430px;
       margin: 0 auto;
+      padding: unset;
     }
 
     .pattern-desktop {
@@ -60,13 +61,13 @@
 
     .find-out-button {
       z-index: 1;
-      padding: 1.2rem 2rem;
+      padding: 1rem 1.8rem;
       background: none;
       border: 1px solid white;
       color: white;
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease-in-out;

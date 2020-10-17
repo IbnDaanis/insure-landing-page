@@ -610,6 +610,7 @@ header .nav-mobile img {
             justify-content: center;
     min-height: 430px;
     margin: 0 auto;
+    padding: unset;
   }
 }
 
@@ -646,13 +647,13 @@ header .nav-mobile img {
 
 #find-out .container .find-out-button {
   z-index: 1;
-  padding: 1.2rem 2rem;
+  padding: 1rem 1.8rem;
   background: none;
   border: 1px solid white;
   color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
@@ -672,33 +673,73 @@ header .nav-mobile img {
   --very-light-gray: #fafafa;
 }
 
+#footer {
+  background: var(--very-light-gray);
+  position: relative;
+}
+
+#footer .pattern-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 #footer .container {
-  padding-bottom: 3rem;
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1000px) {
   #footer .container {
     text-align: center;
+    max-width: unset;
+    width: unset;
+    margin: unset;
+    padding-bottom: 3rem;
   }
 }
 
 #footer .container .footer-heading {
   position: relative;
-  min-height: 250px;
+  min-height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ddd8d8;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 1000px) {
+  #footer .container .footer-heading {
+    min-height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+    margin-bottom: 2rem;
+  }
 }
 
 #footer .container .footer-heading .pattern-mobile {
@@ -718,12 +759,23 @@ header .nav-mobile img {
 }
 
 #footer .container .footer-heading-logo img {
-  width: 120%;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  #footer .container .footer-heading-logo img {
+    width: 120%;
+  }
 }
 
 #footer .container .footer-heading-socials {
   z-index: 1;
-  margin: 0 0 3rem;
+}
+
+@media (max-width: 1000px) {
+  #footer .container .footer-heading-socials {
+    margin: 0 0 3rem;
+  }
 }
 
 #footer .container .footer-heading-socials .socials-list {
@@ -739,12 +791,38 @@ header .nav-mobile img {
 #footer .container .footer-heading-socials .socials-list-item a {
   font-size: 2rem;
   color: var(--dark--grayish-violet);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer .container .footer-heading-socials .socials-list-item a:hover {
+  color: var(--primary-dark-violet);
 }
 
 #footer .container .footer-heading .line {
-  width: 90%;
-  height: 1px;
+  display: none;
   background: #ddd8d8;
+}
+
+@media (max-width: 1000px) {
+  #footer .container .footer-heading .line {
+    display: block;
+    width: 90%;
+    height: 1px;
+  }
+}
+
+#footer .container .footer-sitemap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1000px) {
+  #footer .container .footer-sitemap {
+    display: block;
+  }
 }
 
 #footer .container .footer-sitemap h3 {
@@ -765,6 +843,12 @@ header .nav-mobile img {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.95rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer .container .footer-sitemap ul li a:hover {
+  text-decoration: underline;
 }
 
 #footer .container .footer-sitemap div {

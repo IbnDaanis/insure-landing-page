@@ -7,22 +7,51 @@
 }
 
 #footer {
+  background: var(--very-light-gray);
+  position: relative;
+
+  .pattern-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
   .container {
-    padding-bottom: 3rem;
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 
     @media(max-width: 1000px) {
       text-align: center;
-
+      max-width: unset;
+      width: unset;
+      margin: unset;
+      padding-bottom: 3rem;
     }
 
     .footer-heading {
       position: relative;
-      min-height: 250px;
+      min-height: 130px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(221, 216, 216);
+      margin-bottom: 4rem;
+
+      @media(max-width: 1000px) {
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        margin-bottom: 2rem;
+      }
 
       .pattern-mobile {
         position: absolute;
@@ -39,15 +68,21 @@
         place-items: center;
 
         img {
-          width: 120%;
+          width: 100%;
 
+          @media(max-width: 1000px) {
+            width: 120%;
+          }
         }
 
       }
 
       &-socials {
         z-index: 1;
-        margin: 0 0 3rem;
+
+        @media(max-width: 1000px) {
+          margin: 0 0 3rem;
+        }
 
         .socials-list {
           display: flex;
@@ -58,19 +93,36 @@
             a {
               font-size: 2rem;
               color: var(--dark--grayish-violet);
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                color: var(--primary-dark-violet);
+              }
             }
           }
         }
       }
 
       .line {
-        width: 90%;
-        height: 1px;
+        display: none;
         background: rgb(221, 216, 216);
+
+        @media(max-width: 1000px) {
+          display: block;
+          width: 90%;
+          height: 1px;
+        }
       }
     }
 
     .footer-sitemap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media(max-width: 1000px) {
+        display: block;
+      }
+
       h3 {
         font-family: 'Karla', sans-serif !important;
         color: var(--dark--grayish-violet);
@@ -89,7 +141,11 @@
             text-transform: uppercase;
             font-weight: 700;
             font-size: 0.95rem;
+            transition: all 0.3s ease-in-out;
 
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
